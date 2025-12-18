@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4">Sapphire<span className="text-sapphire-500">.</span></h3>
+            <h3 className="text-2xl font-bold text-white mb-4">SPSAutomates<span className="text-sapphire-500">.</span></h3>
             <p className="mb-4 max-w-sm">
               {COMPANY_INFO.tagline}. Delivering modern digital solutions to underserved markets.
             </p>
@@ -44,8 +44,8 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
-          <p>&copy; {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.</p>
-          <p className="mt-2 md:mt-0 text-slate-500">{COMPANY_INFO.address}</p>
+          <p>&copy; {new Date().getFullYear()} SPSAutomates.com. All rights reserved.</p>
+          <p className="mt-2 md:mt-0 text-slate-500">Sapphire Private Services Limited, {COMPANY_INFO.address}</p>
         </div>
       </div>
     </footer>
