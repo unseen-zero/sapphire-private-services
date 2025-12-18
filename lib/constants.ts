@@ -5,8 +5,8 @@ export const COMPANY_INFO: CompanyInfo = {
   name: "Sapphire Private Services LTD",
   tagline: "Turn missed calls into revenue with automation that works",
   address: "Office 9047, 321-323 High Road, Chadwell Heath, Romford, Essex, RM6 6AX",
-  phone: "+34711051066",
-  phoneDisplay: "+34 711 051 066",
+  phone: "+447456461535",
+  phoneDisplay: "+44 7456 461535",
   email: "spslimited@pm.me"
 };
 
