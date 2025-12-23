@@ -87,19 +87,13 @@ const ServicesOverview = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: service.delay }}
               viewport={{ once: true }}
-              className={`group relative ${service.featured ? 'md:col-span-2 lg:col-span-3' : ''}`}
+              className="group relative"
             >
-              <div className={`relative overflow-hidden rounded-2xl bg-white border border-slate-200/60 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 ${service.featured ? 'p-8 md:p-12' : 'p-6 md:p-8'}`}>
+              <div className="relative overflow-hidden rounded-2xl bg-white border border-slate-200/60 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 p-6 md:p-8">
 
                 {/* Background gradient overlay on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}></div>
 
-                {/* Featured badge */}
-                {service.featured && (
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-amber-500 to-yellow-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                    Premium Service
-                  </div>
-                )}
 
                 {/* Icon with animated background */}
                 <div className="relative mb-6">
@@ -111,11 +105,11 @@ const ServicesOverview = () => {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3 className={`font-bold text-slate-900 mb-3 group-hover:text-slate-800 transition-colors ${service.featured ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'}`}>
+                  <h3 className="font-bold text-slate-900 mb-3 group-hover:text-slate-800 transition-colors text-xl md:text-2xl">
                     {service.title}
                   </h3>
 
-                  <p className={`text-slate-600 mb-6 leading-relaxed ${service.featured ? 'text-base md:text-lg' : 'text-sm md:text-base'}`}>
+                  <p className="text-slate-600 mb-6 leading-relaxed text-sm md:text-base">
                     {service.description}
                   </p>
 
