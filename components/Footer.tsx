@@ -8,19 +8,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold text-white mb-4">SPSAutomates<span className="text-sapphire-500">.</span></h3>
-            <p className="mb-4 max-w-sm">
-              {COMPANY_INFO.tagline}. Delivering modern digital solutions to underserved markets.
-            </p>
-            <div className="flex space-x-4">
-               {/* Social placeholders */}
-               <div className="w-8 h-8 bg-slate-800 rounded-full hover:bg-sapphire-500 transition-colors cursor-pointer flex items-center justify-center">
-                 <span className="text-xs font-bold text-white">LI</span>
-               </div>
-               <div className="w-8 h-8 bg-slate-800 rounded-full hover:bg-sapphire-500 transition-colors cursor-pointer flex items-center justify-center">
-                 <span className="text-xs font-bold text-white">FB</span>
-               </div>
-            </div>
+            <h3 className="text-2xl font-bold text-white">SPSAutomates<span className="text-sapphire-500">.</span></h3>
           </div>
           
           <div>
@@ -36,9 +24,9 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Legal</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:text-sapphire-400 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-sapphire-400 transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-sapphire-400 transition-colors">Cookie Policy</a></li>
+              <li><a href="/privacy-policy" className="hover:text-sapphire-400 transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" className="hover:text-sapphire-400 transition-colors">Terms of Service</a></li>
+              <li><a href="/cookie-policy" className="hover:text-sapphire-400 transition-colors">Cookie Policy</a></li>
             </ul>
           </div>
         </div>
