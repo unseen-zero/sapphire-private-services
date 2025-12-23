@@ -1,7 +1,7 @@
 'use client'
 
 import SectionWrapper from './SectionWrapper';
-import { Code, Bot, MessageSquare, Network, Shield, ArrowRight, Sparkles } from 'lucide-react';
+import { Code, Bot, MessageSquare, Network, ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const ServicesOverview = () => {
@@ -41,16 +41,6 @@ const ServicesOverview = () => {
       gradient: "from-orange-500 to-red-500",
       features: ["Server Installs", "System Management", "Application Deployments"],
       delay: 0.4
-    },
-    {
-      id: 'digital-asset',
-      title: "Digital Asset Advisory & Liquidity Consulting",
-      description: "Expert guidance on managing and optimizing high-value digital currencies. Confidential strategies for portfolio liquidity.",
-      icon: Shield,
-      gradient: "from-amber-500 to-yellow-500",
-      features: ["Confidential Consultations", "Compliance-Focused", "High-Value Optimization"],
-      delay: 0.5,
-      featured: true
     }
   ];
 
@@ -84,7 +74,7 @@ const ServicesOverview = () => {
           </h2>
 
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            We build practical automation solutions that deliver real ROI for your business. From custom websites and AI-powered bots to expert advisory on digital asset strategies, we're here to save you time and help grow your revenue – one smart system at a time.
+            We build practical automation solutions that deliver real ROI for your business. From custom websites and AI-powered bots to comprehensive IT infrastructure, we're here to save you time and help grow your revenue – one smart system at a time.
           </p>
         </motion.div>
 
