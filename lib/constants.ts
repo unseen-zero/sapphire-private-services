@@ -7,14 +7,14 @@ export const COMPANY_INFO: CompanyInfo = {
   address: "Office 9047, 321-323 High Road, Chadwell Heath, Romford, Essex, RM6 6AX",
   phone: "+447456461535",
   phoneDisplay: "+44 7456 461535",
-  email: "spslimited@pm.me"
+  email: "office@spsautomates.com"
 };
 
 export const SERVICES: Service[] = [
   {
     id: 'web',
-    title: "Custom NextJS Websites",
-    description: "High-performance, SEO-optimized websites built with modern technology.",
+    title: "Custom Modern Websites",
+    description: "High-performance, SEO-optimized websites built with cutting-edge technology stacks.",
     price: "€500 - €3,000",
     features: ["Custom Design", "SEO Optimized", "Mobile Responsive", "Fast Loading"],
     icon: Code
@@ -22,25 +22,25 @@ export const SERVICES: Service[] = [
   {
     id: 'voice-ai',
     title: "AI Voice Answering Bots",
-    description: "Never miss a lead again. Our AI answers calls 24/7, books appointments, and qualifies leads.",
+    description: "Never miss a lead again. Our AI answers calls 24/7, books appointments, and qualifies leads with dedicated booking agents.",
     price: "€1,500 setup + €150/mo",
-    features: ["24/7 Availability", "Natural Voice", "CRM Integration", "Call Transcripts"],
+    features: ["24/7 Availability", "Natural Voice", "CRM Integration", "Call Transcripts", "Booking Agents"],
     icon: Bot
   },
   {
     id: 'chatbots',
     title: "WhatsApp & Web Chatbots",
-    description: "Automate customer support and sales directly on your website or WhatsApp.",
+    description: "Automate customer support and sales directly on your website or WhatsApp with integrated booking systems.",
     price: "€800 setup + €150/mo",
-    features: ["Instant Replies", "WhatsApp Business", "Lead Capture", "Multilingual"],
+    features: ["Instant Replies", "WhatsApp Business", "Lead Capture", "Multilingual", "Booking Integration"],
     icon: MessageSquare
   },
   {
     id: 'infrastructure',
     title: "IT Infrastructure Projects",
-    description: "Comprehensive IT solutions for government and education sectors, specifically in Tanzania.",
+    description: "Comprehensive IT solutions for private education sectors.",
     price: "Project-based Quote",
-    features: ["Network Design", "Hardware Procurement", "Secure Systems", "Maintenance"],
+    features: ["Network Design", "Hardware Procurement", "Secure Systems", "Maintenance", "Server Installs", "System Management", "Application Deployments"],
     icon: Network
   }
 ];

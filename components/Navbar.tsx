@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
+    { name: 'Services', href: '#custom-websites' },
     { name: 'Why Us', href: '#why-us' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -26,9 +26,14 @@ const Navbar = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-sapphire-900/95 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold text-white tracking-tight">
-          SPSAutomates<span className="text-sapphire-500">.</span>
-        </a>
+        <div className="flex flex-col">
+          <a href="#" className="text-2xl font-bold text-white tracking-tight">
+            SPSAutomates<span className="text-sapphire-500">.</span>
+          </a>
+          <p className="text-sm text-slate-300 font-medium tracking-wide">
+            Business Automations That Turn Time Into Revenue
+          </p>
+        </div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">

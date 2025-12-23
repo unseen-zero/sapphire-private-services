@@ -7,8 +7,15 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-sapphire-900 overflow-hidden pt-20">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sapphire-900 via-slate-900 to-sapphire-900 z-0"></div>
+      {/* Background Image */}
+      <div className="absolute inset-0 bg-gradient-to-br from-sapphire-900/90 via-slate-900/95 to-sapphire-900/90 z-0">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
+          }}
+        ></div>
+      </div>
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-sapphire-500/10 blur-[100px] rounded-full"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-blue-600/10 blur-[100px] rounded-full"></div>
 
