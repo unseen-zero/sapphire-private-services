@@ -43,6 +43,36 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Trust Badges */}
+        <div className="border-t border-slate-800 pt-8 pb-6">
+          <div className="flex flex-wrap justify-center items-center gap-6 mb-6">
+            <div className="flex items-center space-x-2 bg-slate-800/50 px-3 py-2 rounded-lg">
+              <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs font-bold">✓</span>
+              </div>
+              <span className="text-slate-300 text-sm font-medium">SSL Secured</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-slate-800/50 px-3 py-2 rounded-lg">
+              <div className="w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs font-bold">GDPR</span>
+              </div>
+              <span className="text-slate-300 text-sm font-medium">GDPR Compliant</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-slate-800/50 px-3 py-2 rounded-lg">
+              <div className="w-5 h-5 bg-purple-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs">💳</span>
+              </div>
+              <span className="text-slate-300 text-sm font-medium">Secure Payments</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-slate-800/50 px-3 py-2 rounded-lg">
+              <div className="w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs">24</span>
+              </div>
+              <span className="text-slate-300 text-sm font-medium">24/7 Support</span>
+            </div>
+          </div>
+        </div>
+
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <p>&copy; {new Date().getFullYear()} SPSAutomates.com. All rights reserved.</p>
           <p className="mt-2 md:mt-0 text-slate-500">Sapphire Private Services Limited, {COMPANY_INFO.address}</p>

@@ -16,6 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" />
+      </head>
       <body className={`${inter.className} bg-slate-50 text-slate-900 antialiased`}>
         {children}
       </body>

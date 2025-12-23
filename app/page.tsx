@@ -1,7 +1,9 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
+import SocialProof from '@/components/SocialProof'
 import ProblemSolution from '@/components/ProblemSolution'
-import Services from '@/components/Services'
+import ServicesOverview from '@/components/ServicesOverview'
+import ClientLogos from '@/components/ClientLogos'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import Testimonials from '@/components/Testimonials'
 import Contact from '@/components/Contact'
@@ -13,8 +15,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <ServicesOverview />
+        <SocialProof />
         <ProblemSolution />
-        <Services />
+        <ClientLogos />
         <WhyChooseUs />
         <Testimonials />
         <Contact />

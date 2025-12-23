@@ -7,17 +7,17 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center bg-sapphire-900 overflow-hidden pt-20">
-      {/* Background Image */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sapphire-900/90 via-slate-900/95 to-sapphire-900/90 z-0">
+      {/* Professional Background with Women */}
+      <div className="absolute inset-0 bg-gradient-to-br from-sapphire-900/95 via-slate-900/98 to-sapphire-900/95 z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
+            backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
           }}
         ></div>
+        {/* Subtle overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-sapphire-900/20 via-transparent to-sapphire-900/10"></div>
       </div>
-      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-sapphire-500/10 blur-[100px] rounded-full"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-blue-600/10 blur-[100px] rounded-full"></div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
         <motion.div
