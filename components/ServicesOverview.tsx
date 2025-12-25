@@ -1,6 +1,7 @@
 'use client'
 
 import SectionWrapper from './SectionWrapper';
+import Link from 'next/link';
 import { Code, Bot, MessageSquare, Network, ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -13,7 +14,8 @@ const ServicesOverview = () => {
       icon: Code,
       gradient: "from-blue-500 to-cyan-500",
       features: ["Custom Design", "SEO Optimized", "Mobile Responsive"],
-      delay: 0.1
+      delay: 0.1,
+      link: '/products/custom-modern-websites'
     },
     {
       id: 'voice-ai',
@@ -22,16 +24,18 @@ const ServicesOverview = () => {
       icon: Bot,
       gradient: "from-emerald-500 to-teal-500",
       features: ["24/7 Availability", "Natural Voice", "Booking Agents"],
-      delay: 0.2
+      delay: 0.2,
+      isComingSoon: true
     },
     {
       id: 'chatbots',
-      title: "WhatsApp & Web Chatbots",
-      description: "Automate customer support and sales directly on your website or WhatsApp with integrated booking systems.",
+      title: "WhatsApp, Telegram & Web Chatbots",
+      description: "Automate customer support and sales directly on your website, WhatsApp, or Telegram with integrated booking systems.",
       icon: MessageSquare,
       gradient: "from-purple-500 to-indigo-500",
       features: ["Instant Replies", "WhatsApp Business", "Booking Integration"],
-      delay: 0.3
+      delay: 0.3,
+      link: '/products/whatsapp-web-chatbots'
     },
     {
       id: 'infrastructure',
@@ -40,7 +44,8 @@ const ServicesOverview = () => {
       icon: Network,
       gradient: "from-orange-500 to-red-500",
       features: ["Server Installs", "System Management", "Application Deployments"],
-      delay: 0.4
+      delay: 0.4,
+      isComingSoon: true
     }
   ];
 
@@ -89,56 +94,64 @@ const ServicesOverview = () => {
               viewport={{ once: true }}
               className="group relative"
             >
-              <div className="relative overflow-hidden rounded-2xl bg-white border border-slate-200/60 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 p-6 md:p-8">
+              <Link
+                href={service.isComingSoon ? '#services' : (service.link || '#contact')}
+                className={`block h-full ${service.isComingSoon ? 'cursor-default pointer-events-none' : ''}`}
+                onClick={(e) => service.isComingSoon && e.preventDefault()}
+              >
+                <div className="relative overflow-hidden rounded-2xl bg-white border border-slate-200/60 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 p-6 md:p-8 h-full">
 
-                {/* Background gradient overlay on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}></div>
+                  {/* Background gradient overlay on hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}></div>
 
 
-                {/* Icon with animated background */}
-                <div className="relative mb-6">
-                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-7 h-7 text-white" />
+                  {/* Icon with animated background */}
+                  <div className="relative mb-6">
+                    <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <service.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-20 blur-xl scale-150 transition-opacity duration-500`}></div>
                   </div>
-                  <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-20 blur-xl scale-150 transition-opacity duration-500`}></div>
-                </div>
 
-                {/* Content */}
-                <div className="relative z-10">
-                  <h3 className="font-bold text-slate-900 mb-3 group-hover:text-slate-800 transition-colors text-xl md:text-2xl">
-                    {service.title}
-                  </h3>
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <h3 className="font-bold text-slate-900 mb-3 group-hover:text-slate-800 transition-colors text-xl md:text-2xl">
+                      {service.title}
+                    </h3>
 
-                  <p className="text-slate-600 mb-6 leading-relaxed text-sm md:text-base">
-                    {service.description}
-                  </p>
+                    <p className="text-slate-600 mb-6 leading-relaxed text-sm md:text-base">
+                      {service.description}
+                    </p>
 
-                  {/* Features */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <span
-                        key={idx}
-                        className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-full group-hover:bg-slate-200 transition-colors"
-                      >
-                        {feature}
+                    {/* Features */}
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {service.features.map((feature, idx) => (
+                        <span
+                          key={idx}
+                          className="inline-flex items-center px-3 py-1 bg-slate-100 text-slate-700 text-xs font-medium rounded-full group-hover:bg-slate-200 transition-colors"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* CTA Button */}
+                    <div className="flex items-center justify-between">
+                      <span className={`text-sm font-medium ${service.isComingSoon ? 'text-amber-600 bg-amber-50 px-3 py-1 rounded-full' : 'text-slate-500'}`}>
+                        {service.isComingSoon ? 'Coming soon' : 'Learn more'}
                       </span>
-                    ))}
-                  </div>
-
-                  {/* CTA Button */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-slate-500 font-medium">
-                      Learn more
-                    </span>
-                    <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center group-hover:bg-slate-200 transition-colors">
-                      <ArrowRight className="w-4 h-4 text-slate-600 group-hover:translate-x-1 transition-transform duration-300" />
+                      {!service.isComingSoon && (
+                        <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center group-hover:bg-slate-200 transition-colors">
+                          <ArrowRight className="w-4 h-4 text-slate-600 group-hover:translate-x-1 transition-transform duration-300" />
+                        </div>
+                      )}
                     </div>
                   </div>
-                </div>
 
-                {/* Hover effect lines */}
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-slate-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
+                  {/* Hover effect lines */}
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-slate-200 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>

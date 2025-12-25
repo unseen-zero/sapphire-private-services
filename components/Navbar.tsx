@@ -1,10 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { Menu, X, Phone } from 'lucide-react';
 import { COMPANY_INFO } from '@/lib/constants';
 
-const Navbar = () => {
+const Navbar = ({ alwaysDark = false }: { alwaysDark?: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -17,21 +18,21 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Why Us', href: '#why-us' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/#home' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Why Us', href: '/#why-us' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-sapphire-900/95 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled || alwaysDark ? 'bg-sapphire-900/95 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'}`}>
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <div className="flex flex-col">
-          <a href="#" className="text-2xl font-bold text-white tracking-tight">
+          <Link href="/" className="text-2xl font-bold text-white tracking-tight">
             SPSAutomates<span className="text-sapphire-500">.</span>
-          </a>
+          </Link>
           <p className="text-sm text-slate-300 font-medium tracking-wide">
-            Business Automations That Turn Time Into Revenue
+            Intelligent Business Automations
           </p>
         </div>
 
