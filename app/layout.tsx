@@ -19,6 +19,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.svg" />
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="46gKdl+RTJRIzxONnnaXvQ" async></script>
       </head>
       <body className={`${inter.className} bg-slate-50 text-slate-900 antialiased`} suppressHydrationWarning>
         {children}
